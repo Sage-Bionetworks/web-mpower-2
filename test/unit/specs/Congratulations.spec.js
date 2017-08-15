@@ -8,6 +8,6 @@ describe('Congratulations.vue', () => {
     expect(vm.$el.querySelector('p.large').textContent.trim())
       .to.equal('Congratulations, you\'re eligible!')
     expect(vm.$el.querySelector('button').textContent.trim())
-      .to.equal('I\'d like a walkthrough')
+      .to.equal('Review Consent')
   })
 })
