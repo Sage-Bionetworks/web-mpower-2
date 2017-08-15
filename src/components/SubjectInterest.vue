@@ -101,8 +101,9 @@
 
     </div>
     <br>
-    <button type="submit" v-if="isEligible" v-focus="isEligible" id="next" v-on:click="clicked"> Next </button>
-
+    <div class="row">
+    <button class="text-center" type="submit" v-if="isEligible" v-focus="isEligible" id="next" v-on:click="clicked"> Next </button>
+    </div>
   </div>
 </template>
 

@@ -2,17 +2,17 @@
   <div id="app">
 <!--open sans, lato 40px-->
     <nav class="navbar navbar-fixed-top navbar-light pt-0 pb-0">
-      <div class="navbar-header">
-        <div class="row">
+      <!--<div class="navbar-header">-->
+        <div class="row" id="headRow">
 
           <div class="col-12 text-center text-md-left col-md-4">
             <!-- making the name a hyperlink is for dev purposes.
             so that getting to main page is easy, will replace or change
             at a later time -->
-            <h1 class="lead light" id="status">  Eligibility </a></h1>
+            <h1 class="lead text-center light" id="status">  Eligibility </a></h1>
           </div>
 
-          <div class="col-md-8 text-md-right text-center">
+          <div class="col-md-8 text-center text-md-right">
               <img src="./images/check.png" class="img-fluid check" alt="image of a check marked circle"></img>
              <!--  For keeping all the images even  -->
               <img src="./images/survey.svg" ></img>
@@ -21,7 +21,7 @@
               <img src="./images/ic_lock_black_48px.svg" ></img>
           </div>
 
-        </div>
+        <!--</div>-->
       </div>
     </nav>
       <br>
@@ -50,27 +50,18 @@
       display: inline-block;
   }
 
-  figure {
-      @media (min-width: 767px) {
-          padding-left: 2%;
-          padding-right: 2%;
-      }
-  }
-
   #next {
-    min-width: 200px;
+    min-width: 100px;
   }
-
 
   nav {
-
     color: white !important;
     background-color: #5B34B6 !important;
     box-shadow: 0 2px 3px 0 rgba(141, 141, 141, 0.5);
     min-height: 100px;
     // below is used for aligning the element in the middle vertically
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
 
     top: 0px;
@@ -84,7 +75,6 @@
 
    nav * img {
       border-radius: 50%;
-      // background-color: rgba(65, 73, 90, 0.1);
       background-color: whitesmoke;
       margin-left: 2px;
       margin-right: 2px;
@@ -103,6 +93,14 @@
       }
     }
 
+   @media (min-width: 767px) {
+      .offset-md-2 {
+        margin-left: 16.6%;
+      }
+      #headRow {
+        width: 100%;
+      }
+    }
 
   select, input {
     border-style: none none solid none !important;
