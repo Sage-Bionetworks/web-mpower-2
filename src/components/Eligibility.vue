@@ -1,6 +1,6 @@
 <template>
   <div class="page-overview">
-
+  
     <div class="text-left text-md-center"> You would be a great fit for the mPower study! </div>
     <br>
     <div class="lead text-left text-md-center">
@@ -13,72 +13,44 @@
       <div class="mr-2 col-12 col-sm-auto text-center offset-md-2">
         I am
       </div>
-    
-      <input v-model.number="age" type="number" pattern="\d*" class=" lead light col-12 col-sm-2 phoneInput"
-              id="ageField" placeholder="enter age" min=0  max=100 >
-
+  
+      <input v-model.number="age" type="number" pattern="\d*" class=" lead light col-12 col-sm-2 phoneInput" id="ageField" placeholder="enter age" min=0 max=100>
+  
       <!-- TODO: Import lodash so that this message does not immediately prompt-->
       <div v-if="isUnderage" class="alert alert-danger col-md-4 offset-md-4" id="ageError" role="alert">
         <strong>Sorry.</strong> Participants must be at least 18 years of age to register.
       </div>
-
+  
       <!--Field input two-->
       <div v-if="isUnderage !== null && !isUnderage" class="text-center col-12 col-sm-auto">
         <label class="form-input-label mr-2" for="placeField" id="live"> I live in </label>
       </div>
-      <input v-if="isUnderage !== null && !isUnderage" v-model.number="zipCode" id="placeField"
-              class="text-center lead light col-12 col-md-3 md-input-invalid phoneInput" type="number" pattern="\d*" placeholder="enter 5-digit zip"></input>
+      <input v-if="isUnderage !== null && !isUnderage" v-model.number="zipCode" id="placeField" class="text-center lead light col-12 col-md-3 md-input-invalid phoneInput" type="number" pattern="\d*" placeholder="enter 5-digit zip"></input>
     </div>
-
+  
     <div v-if="isPlaceAnswered !== null && !isPlaceAnswered" class="alert lead light alert-danger col-md-4 offset-md-4" role="alert" id="zipError">
       <strong>Sorry.</strong> Zipcodes must contain at least 5 numbers, if there is a mistake please email sagebase.org
     </div>
-
+  
     <!--Field input three-->
     <div class="row" v-if="isPlaceAnswered">
       <div class="text-center col-12 col-sm-auto offset-md-2 mr-2 phoneInput">
         and I feel </div>
-      <!--<select class="col-12 col-md-3 custom-select lead light text-center phoneInput" id="comfortable"
-              placeholder="please select one" v-model="selectedOptionForPhone" style="white-spce:nowrap !important;">-->
+      <select class="col-12 col-md-3 custom-select lead light text-center phoneInput" id="comfortable" placeholder="please select one" v-model="selectedOptionForPhone" style="white-spce:nowrap !important; min-height: 60px;">-->
         <!--TODO: Fill in with actual values-->
-        <!--<option disabled value=""> Select one</option>
-        <option > comfortable </option>
-        <option > weary </option>
-        <option >  uncomfortable </option>-->
+        <option disabled value=""> Select one</option>
+        <option> comfortable </option>
+        <option> weary </option>
+        <option> uncomfortable </option>
       </select>
-
-
-    <div class="col-md-8 offset-md-2" id="comfortable" v-if="isPlaceAnswered">
-     
-      <div v-bind:class="{dim: !(selectedOptionForPhone === null || selectedOptionForPhone === 'One')}">
-        <input type="radio" id="one" value="One" v-model="selectedOptionForPhone">
-        <label class="custom-input" for="one"> comfortable</label>
-        <br>
-      </div>
-    
-      <span v-bind:class="{dim: !(selectedOptionForPhone === null || selectedOptionForPhone === 'Two')}">
-        <input type="radio" id="two" value="Two" v-model="selectedOptionForPhone">
-        <label class="custom-input" for="two"> weary</label>
-        </label>
-        <br>
-      </span>
-
-      <span v-bind:class="{dim: !(selectedOptionForPhone === null || selectedOptionForPhone === 'Three')}">
-        <input type="radio" id="three" value="Three" v-model="selectedOptionForPhone">
-        <label class="custom-input" for="three"> uncomfortable</label>
-        </label>
-        <br>
-      </span>
-
+  
+      <label class="text-center col-sm-auto pl-3"> using my phone </label>
     </div>
-      <label class="text-center col-sm-auto col-12"> using my phone </label>
-    </div>
-
     <br>
     <div class="row">
       <br>
       <br>
-      <div class="col-md-12" v-if="isEligible">
+      <div class="text-center" v-if="isEligible">
         <button v-on:click="clicked" v-bind:class="{dim: !isEligible}" v-focus="isEligible" id="next"> Submit </button>
       </div>
     </div>

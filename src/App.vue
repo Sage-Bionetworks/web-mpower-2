@@ -1,5 +1,5 @@
 <template>
-  <div id="app" name="top">
+  <div id="app">
 <!--open sans, lato 40px-->
     <nav class="navbar navbar-fixed-top navbar-light pt-0 pb-0">
       <div class="navbar-header">
@@ -9,7 +9,7 @@
             <!-- making the name a hyperlink is for dev purposes.
             so that getting to main page is easy, will replace or change
             at a later time -->
-            <h1 class="lead light tiny" id="status">  Eligibility </a></h1>
+            <h1 class="lead light" id="status">  Eligibility </a></h1>
           </div>
 
           <div class="col-md-8 text-md-right text-center">
@@ -30,7 +30,6 @@
     <!--- TODO: must update to make sure application is only single page -->
 
     <footer class="footer">
-      <a href="#top"></a>
       <h2> Copyright 2017 SageBionetworks</h2>
     </footer>
 
@@ -58,17 +57,10 @@
       }
   }
 
-
-  // to use the current setup with captioning the first image, must put blank
-  // text in the other captions, may change later
-  figcaption.hidden {
-      opacity: 0.0;
-      font-size: 14px;
+  #next {
+    min-width: 200px;
   }
 
-  .router {
-      // margin-top: 150px;
-  }
 
   nav {
 
@@ -166,6 +158,10 @@
           max-width: 80%;
           margin-left: 10%;
       }
+  }
+
+  .tiny {
+    font-size: $font-size-base * 0.75;
   }
 
   button#walkthrough {
