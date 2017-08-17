@@ -50,7 +50,7 @@
     <div class="row">
       <br>
       <br>
-      <div class="text-center" v-if="isEligible">
+      <div v-if="isEligible">
         <button v-on:click="clicked" v-bind:class="{dim: !isEligible}" v-focus="isEligible" id="next"> Submit </button>
       </div>
     </div>

@@ -86,6 +86,9 @@
       }
    }
 
+   #next {
+     min-width: 200px;
+   }
    @media (max-width: 767px) {
       nav * img {
         height: 30px !important;

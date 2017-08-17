@@ -32,54 +32,6 @@
 
       </form>
 
-      <!--One possible choice for choosing how to pick elements below-->      
-      <!--<form class="form-check col-md-8 offset-md-2 text-left">
-        <transition name="fade">
-          <input type="radio" id="one" value="One" v-model="selectedOptionOne" v-if="selectedOptionOne === null || selectedOptionOne === 'One'">
-        </transition>
-        <transition name="fade">
-          <label for="one" v-if="selectedOptionOne === null || selectedOptionOne === 'One'">have parkinsons</label>
-        </transition>
-        <transition name="fade">          
-          <br v-if="selectedOptionOne === null || selectedOptionOne === 'One'">
-        </transition>
-
-        <transition name="fade">
-          <input  type="radio" id="two" value="Two" v-model="selectedOptionOne" v-if="selectedOptionOne === null || selectedOptionOne === 'Two'">
-        </transition>
-        <transition name="fade">
-          <label v-if="selectedOptionOne === null || selectedOptionOne === 'Two'" for="two">have another movement disorder</label v-if="selectedOptionOne === null || selectedOptionOne === 'Two'"></label>
-        </transition>
-        <transition name="fade">
-          <br v-if="selectedOptionOne === null || selectedOptionOne === 'Two'">
-        </transition>
-        
-        <transition name="fade">
-          <input type="radio" id="three" value="Three" v-model="selectedOptionOne" v-if="selectedOptionOne === null || selectedOptionOne === 'Three'">
-        </transition>
-        <transition name="fade">
-          <label v-if="selectedOptionOne === null || selectedOptionOne === 'Three'" for="three">would like to be a control subject</label v-if="selectedOptionOne === null || selectedOptionOne === 'Three'">
-          </label>
-        </transition>
-        <transition name="fade">
-          <br v-if="selectedOptionOne === null || selectedOptionOne === 'Three'">
-        </transition>
-        </form>-->
-    <!--</div>-->
-  
-    <!--<div class="row" v-if="true">
-
-    <div class="col-md-8 offset-md-2 text-left">
-      <!--<label class="typo__label"> Drop down version </label>-->
-        <!--<multiselect v-model="selectedOptionOne" :options="options" :multiple="true" :close-on-select="false" :clear-on-select="false" :hide-selected="true" :preserve-search="true" placeholder="Choose your reason(s)" label="name" track-by="name" open-direction="bottom">
-          <template slot="tag" scope="props">
-            <span class="custom__tag">
-              <span>{{ props.option.name }}</span>
-              <span class="custom__remove" @click="props.remove(props.option)"> ❌ </span>
-            </span>
-          </template>
-        </multiselect>
-    </div>-->
       <br class="visible-md-up">
       <br class="visible-md-up">
       <p v-if="isInterested" class="col-md-8 offset-md-2 pl-2 pl-md-0"> and I would be willing to try </p>
@@ -100,7 +52,6 @@
       </div>
 
     </div>
-    <br>
     <div class="row">
     <button class="text-center" type="submit" v-if="isEligible" v-focus="isEligible" id="next" v-on:click="clicked"> Next </button>
     </div>
