@@ -1,6 +1,6 @@
-# web-mpower-2
+mPower 2.0 Enrollment Site
 
-> mPower 2.0 website. Builds are deployed to: `http://web-mpower-2.s3-website-us-east-1.amazonaws.com/$BRANCH_NAME/`
+[![Build Status](https://travis-ci.org/Sage-Bionetworks/web-mpower-2.svg?branch=develop)](https://travis-ci.org/Sage-Bionetworks/web-mpower-2)
 
 ## Build Setup
 

@@ -1,45 +1,45 @@
 language: node_js
 node_js:
-  - 7
-
-# Selenium-fixes, see: https://github.com/dwyl/learn-nightwatch/issues/8#issuecomment-264734792
+- 7.2.1
 dist: trusty
 sudo: required
 before_install:
- - export CHROME_BIN=/usr/bin/google-chrome
- - export DISPLAY=:99.0
- - sh -e /etc/init.d/xvfb start
- - sudo apt-get update
- - sudo apt-get install -y libappindicator1 fonts-liberation
- - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
- - sudo dpkg -i google-chrome*.deb
+- export CHROME_BIN=/usr/bin/google-chrome
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sudo apt-get update
+- sudo apt-get install -y libappindicator1 fonts-liberation
+- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+- sudo dpkg -i google-chrome*.deb
 before_script:
-  - jdk_switcher use oraclejdk8
-# End Selenium-fixes
-
+- jdk_switcher use oraclejdk8
 after_success:
-  - npm run build
-
+- npm run build
 deploy:
   - provider: s3
-    acl: public_read
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: $AWS_S3_BUCKET
-    upload-dir: $TRAVIS_BRANCH
+    access_key_id: AKIAJ6YWVFOX3GHDXVRQ
+    secret_access_key:
+      secure: fXlRvqgCacAdqwQh34hIcNvlFxHZEcR4n/Gj8UNqtUOzcR20o3S/FX2DxnG6FxQfPTNpbn+6i1fVCeqirxBO+Vq4UDRUHMdROhwxcFFgjH213r142tQxyn24YmBd/AkVjyLbQFOt2PSgnM9CZLSNIVXYn4h+cVQwIXy3vHvmM6XLdBTeJa3f/bKXLx7lbWQBPcVq9V5IF/cp4c6noch77MfgbKoMk3BliaORreMw2sK7Wlp37sk70+nfjpwjx8PXdiC9VsRFwOPCOspRjT6s846o2CajSVRV6GEaCs9P9nBr+xdj3moI2AR1KllmhAvxXzWJ2mpIzBtkEVBPztTTMNW1x+C2MxwzrQNuvFPQCFYcnbVoPSJiJyZX1pv0HUL4TXrOqnmR/tHJPnJ+mmkq6lnUSEDT1AAVJvjRKH0GYbjLYzoCRGGGdQ8XfjHM7urvStXvsMjlgqMDb+UouUuFcO9ajbZoky+qqBnUyDLmvfy4dJA6uh7dyMNreyI8RpgTkTUKhp4iRBuWATLve9a06Ui81Rp9mrc0SS4a4+1FG+eVCjqAxnO9Zd8lOEQPV9LCKXGP53jXB/UipK9caOy8b1VGIPPjHUbUn5//9Iqbe/4gfu3C9VgyxpM/McnQPjYpGSGxcH79pArDphniwxIe1IwyqCnxf9nuibQXgBNvc/E=
+    bucket: mpower.sagebridge.org
     skip_cleanup: true
+    acl: public_read
+    detect_encoding: false
+    region: us-east-1
     local_dir: dist
     on:
-      all_branches: true
+      branch: develop
   - provider: s3
-    acl: public_read
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: $AWS_S3_BUCKET
+    access_key_id: AKIAJ6YWVFOX3GHDXVRQ
+    secret_access_key:
+      secure: fXlRvqgCacAdqwQh34hIcNvlFxHZEcR4n/Gj8UNqtUOzcR20o3S/FX2DxnG6FxQfPTNpbn+6i1fVCeqirxBO+Vq4UDRUHMdROhwxcFFgjH213r142tQxyn24YmBd/AkVjyLbQFOt2PSgnM9CZLSNIVXYn4h+cVQwIXy3vHvmM6XLdBTeJa3f/bKXLx7lbWQBPcVq9V5IF/cp4c6noch77MfgbKoMk3BliaORreMw2sK7Wlp37sk70+nfjpwjx8PXdiC9VsRFwOPCOspRjT6s846o2CajSVRV6GEaCs9P9nBr+xdj3moI2AR1KllmhAvxXzWJ2mpIzBtkEVBPztTTMNW1x+C2MxwzrQNuvFPQCFYcnbVoPSJiJyZX1pv0HUL4TXrOqnmR/tHJPnJ+mmkq6lnUSEDT1AAVJvjRKH0GYbjLYzoCRGGGdQ8XfjHM7urvStXvsMjlgqMDb+UouUuFcO9ajbZoky+qqBnUyDLmvfy4dJA6uh7dyMNreyI8RpgTkTUKhp4iRBuWATLve9a06Ui81Rp9mrc0SS4a4+1FG+eVCjqAxnO9Zd8lOEQPV9LCKXGP53jXB/UipK9caOy8b1VGIPPjHUbUn5//9Iqbe/4gfu3C9VgyxpM/McnQPjYpGSGxcH79pArDphniwxIe1IwyqCnxf9nuibQXgBNvc/E=
+    bucket: parkinsonmpower.org
     skip_cleanup: true
+    acl: public_read
+    detect_encoding: false
+    region: us-east-1
     local_dir: dist
     on:
-      branch: master
+      branch: release
 cache:
   directories:
-    - "node_modules"
+  - node_modules
