@@ -20,7 +20,7 @@
     "@material/snackbar": "^0.29.0",
     "ajv": "^6.0.0",
     "autoprefixer": "^9.6.1",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.0.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
