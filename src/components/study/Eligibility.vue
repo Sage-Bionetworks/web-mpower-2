@@ -3,16 +3,16 @@
     <MainNav title="Eligibility" :back-to-overview="true" :show-help="true" :show-steps="true"/>
     <section>
       <form class="container" onsubmit="return false" @keypress="advanceOnTab">
-        <h3>Let’s find out if you’re eligible</h3>
+        <h3>{{ $t('eligibility-screen.title') }}</h3>
 
         <div class="question" v-if="step >= 1">
-          <span>I am </span>
+          <span>{{ $t('eligibility-screen.q1.i-am') }} </span>
           <mdc-textfield @blur="advanceTo(2)" v-model="age" type="tel" label="Age"/>
-          <span>years old</span>
+          <span>{{ $t('eligibility-screen.q1.years-old') }}</span>
         </div>
 
         <div class="question" v-if="step >= 2">
-          <span>I live </span>
+          <span>{{ $t('eligibility-screen.q2.i-live') }} </span>
           <div class="mdc-select">
             <select @change="advanceTo(3)" dense v-model="residence" class="mdc-select__surface">
               <option :key="state" v-for="state in states">{{state}}</option>
@@ -22,17 +22,17 @@
         </div>
 
         <div class="question" v-if="step >= 3">
-          <span>I </span>
+          <span>{{ $t('eligibility-screen.q3.i') }} </span>
           <div class="mdc-select">
             <select @change="advanceTo(4)" dense v-model="comfort" class="mdc-select__surface">
-              <option>Select</option>
-              <option>have an Apple</option>
-              <option>have an Android</option>
-              <option>do not have a</option>
+              <option>{{ $t('eligibility-screen.q3.select') }}</option>
+              <option>{{ $t('eligibility-screen.q3.have-apple') }}</option>
+              <option>{{ $t('eligibility-screen.q3.have-android') }}</option>
+              <option>{{ $t('eligibility-screen.q3.do-not-have') }}</option>
             </select>
             <div class="mdc-select__bottom-line"></div>
           </div>
-          <span>smart phone.</span>
+          <span>{{ $t('eligibility-screen.q3.smart-phone') }}</span>
         </div>
       </form>
     </section>
@@ -46,7 +46,6 @@ import MainNav from './MainNav.vue'
 import Footer from './Footer.vue'
 import Store from '../store';
 
-const STATES = ['Select', "in the United States", "in Canada", "outside of the United States and Canada"]
 const ANDROID_FORM_LINK = 'https://docs.google.com/forms/d/e/1FAIpQLSfq73gWXNqufhDQpkKZv20RjDLAHTQiSmdJVHISVd0Hg-wQ-Q/viewform?usp=sf_link';
 
 export default {
@@ -58,7 +57,7 @@ export default {
       totalSteps: 3,
       residence: 'Select',
       comfort: 'Select',
-      states: STATES,
+      states: [this.$t('eligibility-screen.q2.select'), this.$t('eligibility-screen.q2.in-US'), this.$t('eligibility-screen.q2.in-other'), this.$t('eligibility-screen.q2.outside-eligible-area')],
       age: ''
     }
   },
@@ -93,12 +92,12 @@ export default {
       this.step += 1;
     },
     doSubmit() {
-      if (this.comfort === "have an Android" && window.queryParams.android !== "true") {
+      if (this.comfort === this.$t('eligibility-screen.q3.have-android') && window.queryParams.android !== "true") {
           window.location = ANDROID_FORM_LINK;
           return;
       }
-      var validResidence = (this.residence === "in the United States" || this.residence === "in Canada");
-      var validComfort = (this.comfort !== 'do not have a')
+      var validResidence = (this.residence === this.$t('eligibility-screen.q2.in-US') || this.residence === this.$t('eligibility-screen.q2.in-other'));
+      var validComfort = (this.comfort !== this.$t('eligibility-screen.q3.do-not-have'))
       var validAge = this.age >= 18;
 
       if (!validAge || !validResidence || !validComfort ) {

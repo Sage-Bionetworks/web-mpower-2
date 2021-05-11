@@ -13,23 +13,23 @@
         <div class="questions">
           <div class="question" :class="{error: isError('purpose')}">
             <label>Question 1</label>
-            <p>What is the purpose of this study?</p>
+            <p>{{ $t('quiz-screen.q1.q') }}</p>
           </div>
           <div class="question" :class="{error: isError('anon')}">
             <label>Question 2</label>
-            <p>Will my name be stored with my study data?</p>
+            <p>{{ $t('quiz-screen.q2.q') }}</p>
           </div>
           <div class="question" :class="{error: isError('deletable')}">
             <label>Question 3</label>
-            <p>If I decide to share my data with qualified researchers and then I change my mind, can my data be deleted from their studies?</p>
+            <p>{{ $t('quiz-screen.q3.q') }}</p>
           </div>
           <div class="question" :class="{error: isError('stressful')}">
             <label>Question 4</label>
-            <p>For some people, seeing their data may be stressful.</p>
+            <p>{{ $t('quiz-screen.q4.q') }}</p>
           </div>
           <div class="question" :class="{error: isError('pausable')}">
             <label>Question 5</label>
-            <p>With the mPower app I will be able to&hellip;</p>
+            <p>{{ $t('quiz-screen.q5.q') }}&hellip;</p>
           </div>
         </div>
       </div>

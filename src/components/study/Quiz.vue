@@ -5,76 +5,76 @@
       <div class="container">
         <div class="question" v-show="step === 1">
           <label>Question {{step}}</label>
-          <h3>What is the purpose of this study?</h3>
+          <h3>{{ $t('quiz-screen.q1.q') }}</h3>
 
           <RadioButton @change="updateQuizState" name="purpose" value="right">
-            Understand the changes in Parkinson’s disease symptoms 
+            {{ $t('quiz-screen.q1.a1') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="purpose" value="wrong1">
-            Give medical and treatment advice to people with Parkinson’s disease
+            {{ $t('quiz-screen.q1.a2') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="purpose" value="wrong2">
-            Diagnose people with Parkinson’s disease
+            {{ $t('quiz-screen.q1.a3') }}
           </RadioButton>
         </div>
 
         <div class="question" v-show="step === 2">
           <label>Question {{step}}</label>
-          <h3>What will be used to identify my study data?</h3>
+          <h3>{{ $t('quiz-screen.q2.q') }}</h3>
 
           <RadioButton @change="updateQuizState"  name="anon" value="wrong1">
-            My full name
+            {{ $t('quiz-screen.q2.a1') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="anon" value="wrong2">
-            My house address
+            {{ $t('quiz-screen.q2.a2') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="anon" value="right">
-            My Global Unique Identifier (GUID)
+            {{ $t('quiz-screen.q2.a3') }}
           </RadioButton>
         </div>
         
         <div class="question" v-show="step === 3">
           <label>Question {{step}}</label>
-          <h3>I decided to share my data broadly with qualified researchers and now I want to stop. What happens to the data I have already shared?</h3>
+          <h3>{{ $t('quiz-screen.q3.q') }}</h3>
 
           <RadioButton @change="updateQuizState"  name="deletable" value="wrong1">
-            My account and all my data will be deleted 
+            {{ $t('quiz-screen.q3.a1') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="deletable" value="right">
-            The data I already shared will continue to be used in research
+            {{ $t('quiz-screen.q3.a2') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="deletable" value="wrong2">
-            My data will be sent to my regular healthcare provider
+            {{ $t('quiz-screen.q3.a3') }}
           </RadioButton>
         </div>
 
         <div class="question" v-show="step === 4">
           <label>Question {{step}}</label>
-          <h3>Are there risks of participating in this study?</h3>
+          <h3>{{ $t('quiz-screen.q4.q') }}</h3>
 
           <RadioButton @change="updateQuizState"  name="stressful" value="wrong1">
-            There is no risk of participating in this research study
+            {{ $t('quiz-screen.q4.a1') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="stressful" value="wrong2">
-            There is a risk that my regular doctor won’t be allowed to care for me any longer
+            {{ $t('quiz-screen.q4.a2') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="stressful" value="right">
-            Some activities may be tiring and seeing my data may be stressful
+            {{ $t('quiz-screen.q4.a3') }}
           </RadioButton>
         </div>
 
         <div class="question" v-show="step === 5">
           <label>Question {{step}}</label>
-          <h3>With the mPower app I will be able to:</h3>
+          <h3>{{ $t('quiz-screen.q5.q') }}:</h3>
 
           <RadioButton @change="updateQuizState"  name="pausable" value="right">
-            Track my symptoms and triggers
+            {{ $t('quiz-screen.q5.a1') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="pausable" value="wrong1">
-            Schedule an appointment with my regular doctor
+            {{ $t('quiz-screen.q5.a2') }}
           </RadioButton>
           <RadioButton @change="updateQuizState"  name="pausable" value="wrong2">
-            Join a support group for people living with Parkinson's disease
+            {{ $t('quiz-screen.q5.a3') }}
           </RadioButton>
         </div>
       </div>

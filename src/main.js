@@ -21,6 +21,7 @@ window.__forceSmoothScrollPolyfill__ = true;
 require('smoothscroll-polyfill').polyfill();
 
 import VueMDCAdapter from 'vue-mdc-adapter'
+import i18n from './i18n'
 Vue.use(VueMDCAdapter)
 
 Vue.config.productionTip = true
@@ -75,5 +76,6 @@ new Vue({
   router,
   store: store,
   components: { App },
+  i18n,
   template: '<App/>'
 })

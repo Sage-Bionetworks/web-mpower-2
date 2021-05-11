@@ -1,0 +1,132 @@
+{
+  "eligibility-screen": {
+    "title": "Let’s find out if you’re eligible",
+    "q1": {
+      "i-am": "I am",
+      "years-old": "years old."
+    },
+    "q2": {
+      "i-live": "I live",
+      "select": "Select",
+      "in-US": "in the United States",
+      "in-other": "in Canada",
+      "outside-eligible-area": "outside of the United States and Canada"
+    },
+    "q3": {
+      "i": "I",
+      "select": "Select",
+      "have-apple": "have an Apple",
+      "have-android": "have an Android",
+      "do-not-have": "do not have a",
+      "smart-phone": "smart phone."
+    }
+  },
+  "consent-screen": {
+    "step-1": {
+      "title": "What is involved",
+      "install-on-phone": "If you decide to participate in the study, you’ll first need to install the free mPower app to your phone.",
+      "use-app-to": "To understand changes in your health we will ask you to use the app to:",
+      "answer-health-questions": "Answer a few questions about your health, once when you start the study (5 minutes).",
+      "track-symptoms": "Track your symptoms, triggers and medications daily (5 minutes).",
+      "complete-activities": "Complete activities on the app like tapping your fingers or doing a cognitive game daily for 2 weeks (10 minutes). Repeat every 3 months.",
+      "participation-time": "We would like you to participate for 2 years if you can but you can participate as long as you like."
+    },
+    "step-2": {
+      "title": "Data Collection, Storage & Privacy",
+      "data-encrypted":"Your data is encrypted on your phone.",
+      "collect-data":"We collect the encrypted survey responses, activity data, and passive sensor measurements from your phone.",
+      "not-location":"We will NOT collect your exact location or what you are typing on your phone (for example text messages, emails, etc.)",
+      "use-guid":"We replace your name with a unique code (GUID). We will combine your coded study data with data from other volunteers.",
+      "on-cloud": "We store the coded study data on a secure cloud server. "
+    },
+    "step-3": {
+      "title":"Data Use & Trends",
+      "view-activities": "You will be able to view your symptoms, triggers, medication adherence and sensor based activities.",
+      "see-data": "You will be able to see your data and can start to see trends in your data.",
+      "use-for-research": "We will use your study data for research.",
+      "patterns":"We will use the study data to look for patterns. These patterns may help us better understand the symptoms of PD."
+    },
+    "step-4": {
+      "title":"Sharing for Future Research",
+      "sharing-data": "Sharing your coded study data broadly (without information such as your name) may benefit this and future research.",
+      "share-with-researchers": "You get to decide if you want to share your coded study data broadly with qualified researchers.",
+      "cannot-withdraw": "Once we have shared your data with other researchers we cannot withdraw it."
+    },
+    "step-5": {
+      "title":"Potential Risks",
+      "low-participation":"We expect the risk of participating in this study to be low.",
+      "tiring":"Some of the activities and questions we ask could be tiring, frustrating, boring or may make you feel uncomfortable.",
+      "emotions":"Seeing your data may cause many emotions. ",
+      "hacked":"We will do our best to protect your information, but your data could be hacked.",
+      "unknowns":"There may be other risks to participating that we do not know about yet."
+    },
+    "step-6": {
+      "title":"Potential Benefits",
+      "interesting-trends":"You may not directly benefit from taking part but seeing trends in your data may be interesting to you.",
+      "share":"You can share this data with your doctors, family members, or others.",
+      "help-all":"You may help researchers better understand Parkinson’s Disease. This may help future generations. "
+    },
+    "step-7": {
+      "title":"NOT medical care",
+      "research-study":"mPower is a research study.",
+      "not-medical-care":"mPower does not provide medical care, medical advice, or treatment.",
+      "not-diagnosis-tool":"The mPower app is not a diagnosis tool.",
+      "concerns":"Contact your health provider if you have questions or concerns related to your health, or if you need medical care."
+    },
+    "step-8": {
+      "title":"Issues to Consider",
+      "data-plan":"The time you use on this app may count against your mobile data plan. You can set up the app to use Wi-Fi connections instead. ",
+      "not-paid":"You will not be paid for participating in this study. You will not be paid for sharing your data. ",
+      "no-profit":"You will not receive any profit from this or future research.",
+      "injury":"The risk of injury is low in this study. You will not be compensated for injury."
+    },
+    "step-9": {
+      "title":"Leaving the Study",
+      "voluntary":"Your participation is voluntary.",
+      "leave":"You may leave the study at any time and for any reason.",
+      "withdraw-consent":"If you leave the study, you withdraw your consent.",
+      "before-withdraw":"Your study data from before your withdrawal will continue to be used in the study. It will not be destroyed or deleted."
+    },
+    "step-10": {
+      "title":"Contact",
+      "email":"If you have questions you can reach us by email at PDApp@sagebionetworks.org or call toll free +1.833-SAGEBIO.",
+      "reach-out":"We may want to reach out to you.",
+      "opt-out":"You can opt out of these follow up notifications at any time"
+    }
+  },
+  "quiz-screen": {
+    "q1": {
+      "q": "What is the purpose of this study?",
+      "a1": "Understand the changes in Parkinson’s disease symptoms ",
+      "a2": "Give medical and treatment advice to people with Parkinson’s disease",
+      "a3": "Diagnose people with Parkinson’s disease"
+    },
+    "q2": {
+      "q": "What will be used to identify my study data?",
+      "a1": "My full name",
+      "a2": "My house address",
+      "a3": "My Global Unique Identifier (GUID)"
+    },
+    "q3": {
+      "q": "I decided to share my data broadly with qualified researchers and now I want to stop. What happens to the data I have already shared?",
+      "a1": "My account and all my data will be deleted ",
+      "a2": "The data I already shared will continue to be used in research",
+      "a3": "My data will be sent to my regular healthcare provider"
+    },
+    "q4": {
+      "q": "Are there risks of participating in this study?",
+      "a1": "There is no risk of participating in this research study",
+      "a2": "There is a risk that my regular doctor won’t be allowed to care for me any longer",
+      "a3": "Some activities may be tiring and seeing my data may be stressful"
+    },
+    "q5": {
+      "q": "With the mPower app I will be able to",
+      "a1": "Track my symptoms and triggers",
+      "a2": "Schedule an appointment with my regular doctor",
+      "a3": "Join a support group for people living with Parkinson's disease"
+    }
+  },
+  "ineligible-screen": {
+    "requirements": "You must be at least 18, live in the US or Canada, and be comfortable using a smartphone to participate."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "eligibility-screen": {
+    "title": "Laten we kijken of u geschikt bent",
+    "q1": {
+      "i-am": "Ik ben",
+      "years-old": "jaar oud."
+    },
+    "q2": {
+      "i-live": "Ik woon",
+      "select": "Select",
+      "in-US": "in de Verenigde Staten",
+      "in-other": "in Nederland",
+      "outside-eligible-area": "niet in de Verenigde Staten of Nederland"
+    },
+    "q3": {
+      "i": "Ik",
+      "select": "Select",
+      "have-apple": " heb Apple",
+      "have-android": " heb Android",
+      "do-not-have": " heb geen",
+      "smart-phone": "smartphone."
+    }
+  },
+  "consent-screen": {
+    "step-1": {
+      "title": "Wat is erbij betrokken",
+      "install-on-phone": "Installeer de mPower app op uw telefoon.",
+      "use-app-to": "Om veranderingen in uw gezondheid te begrijpen vragen we u het volgende:",
+      "answer-health-questions": "Bij aanvang van het onderzoek beantwoordt u een aantal vragen over uw gezondheid (5 minuten).",
+      "track-symptoms": "U kunt uw gezondheid dagelijks bijhouden via uw symptomen en medicatie (5 minuten).",
+      "complete-activities": "Iedere drie maanden wordt u gevraagd om dagelijks een aantal activiteiten op de app te doen gedurende twee weken, zoals tikken met uw vingers (10 minuten). Iedere drie maanden wordt u gevraagd een fitheidstest te doen, waarbij u gedurende drie minuten op een verhoging stapt met uw telefooon in de hand (3 minuten).",
+      "participation-time": "We hopen dat u twee jaar mee wilt doen met het onderzoek, maar u mag meedoen zolang u wilt."
+    },
+    "step-2": {
+      "title": "Gegevensverzameling, opslag en privacy",
+      "data-encrypted":"Uw data is versleuteld op uw telefoon.",
+      "collect-data":"We verzamelen de versleutelde antwoorden op de vragenlijsten, gegevens van activiteiten en passieve sensor metingen vanaf uw telefoon.",
+      "not-location":"We verzamelen NIET uw exacte locatie of wat u typt op uw telefoon (bijvoorbeeld SMS, e-mails, etc.).",
+      "use-guid":"We vervangen uw naam met een willekeurige code en combineren uw gecodeerde onderzoeksgegevens met gegevens van andere vrijwilligers.",
+      "on-cloud": "We bewaren de gecodeerde gegevens op een beveiligde online server."
+    },
+    "step-3": {
+      "title":"Gegevensgebruik en trends",
+      "view-activities": "U kunt uw symptomen, medicatie naleving en op sensor gebaseerde activiteiten zien.",
+      "see-data": "U kunt uw gegevens en trends in uw gegevens zien.",
+      "use-for-research": "We zullen uw gegevens voor onderzoek gebruiken.",
+      "patterns":"We zullen de onderzoeksgegevens gebruiken om te kijken naar patronen. Deze patronen kunnen ons mogelijk helpen om de symptomen van de ziekte van Parkinson beter te begrijpen."
+    },
+    "step-4": {
+      "title":"Delen voor toekomstig onderzoek",
+      "sharing-data": "Het breder delen van uw gecodeerde onderzoeksgegevens (zonder informatie zoals uw naam) kan helpen bij dit en toekomstig onderzoek.",
+      "share-with-researchers": "U kunt zelf beslissen of u uw gecodeerde gegevens breder wilt delen.",
+      "cannot-withdraw": "Wanneer we uw gegevens hebben gedeeld met andere onderzoekers, kunnen we het niet meer terugtrekken."
+    },
+    "step-5": {
+      "title":"Potentiële risico’s",
+      "low-participation":"We verwachten dat de risico’s van het meedoen aan dit onderzoek laag zijn.",
+      "tiring":"Sommige activiteiten of vragen kunnen vermoeiend, frustrerend of saai zijn of kunnen u zich oncomfortabel laten voelen.",
+      "emotions":"Het zien van uw gegevens kan verschillende emoties opwekken.",
+      "hacked":"We doen ons uiterste best om uw informatie te beschermen, maar er bestaat een (zeer kleine) kans dat uw gegevens worden gehackt.",
+      "unknowns":"Er kunnen mogelijk risico’s zijn waar we op dit moment nog niet van weten."
+    },
+    "step-6": {
+      "title":"Potentiële voordelen",
+      "interesting-trends":"U vindt mogelijk geen directe voordelen aan het meedoen aan dit onderzoek maar het zien van trends in uw gegevens kan interessant zijn voor u.",
+      "share":"U kunt uw gegevens delen met uw dokters, familieleden en anderen.",
+      "help-all":"U kunt onderzoekers helpen om de ziekte van Parkinson beter te begrijpen. Dat kan volgende generaties helpen."
+    },
+    "step-7": {
+      "title":"Geen medische zorg",
+      "research-study":"mPower is een onderzoek.",
+      "not-medical-care":"mPower voorziet geen medische zorg, medisch advies of behandeling.",
+      "not-diagnosis-tool":"De mPower app is geen middel voor diagnostiek.",
+      "concerns":"Neem contact op met uw zorgverlener als u vragen of zorgen heeft gerelateerd aan uw gezondheid of als u medische zorg nodig heeft."
+    },
+    "step-8": {
+      "title":"Zaken om te overwegen",
+      "data-plan":"De hoeveelheid data die deze app gebruikt, kan wellicht niet passen in uw mobiele abonnement. U kunt instellen dat de app Wi-Fi connecties gebruikt in plaats van mobiele data (zoals 4G).",
+      "not-paid":"U wordt niet betaald voor het meedoen aan dit onderzoek. U wordt niet betaald voor het delen van uw gegevens.",
+      "no-profit":"U ontvangt geen enkele winst van dit of toekomstig onderzoek.",
+      "injury":"Het risico op het oplopen van blessures is laag in dit onderzoek. U wordt niet gecompenseerd voor eventuele blessures."
+    },
+    "step-9": {
+      "title":"Verlaten van het onderzoek",
+      "voluntary":"Uw deelname is vrijwillig.",
+      "leave":"U kunt het onderzoek op ieder moment verlaten voor iedere reden.",
+      "withdraw-consent":"Als u het onderzoek verlaat, kunt u uw toestemming terugtrekken.",
+      "before-withdraw":"Uw onderzoeksgegevens van voor uw terugtrekking zullen wel worden gebruikt in het onderzoek."
+    },
+    "step-10": {
+      "title":"Contact",
+      "email":"Als u vragen heeft, kunt u contact met ons opnemen via stepwise.neuro@radboudumc.nl",
+      "reach-out":"We kunnen mogelijk contact met u opnemen.",
+      "opt-out":"U kunt u op ieder moment afmelden voor het onderzoek."
+    }
+  },
+  "quiz-screen": {
+    "q1": {
+      "q": "Wat is het doel van dit onderzoek?",
+      "a1": "Begrijpen van fluctuaties in de symptomen van de ziekte van Parkinson",
+      "a2": "Medische en behandelingsadviezen geven aan mensen met de ziekte van Parkinson",
+      "a3": "Diagnosticeren van de ziekte van Parkinson bij mensen"
+    },
+    "q2": {
+      "q": "Wat zal worden gebruikt om mijn onderzoeksgegevens te identificeren?",
+      "a1": "Mijn volledige naam",
+      "a2": "Mijn thuisadres",
+      "a3": "Mijn willekeurige code"
+    },
+    "q3": {
+      "q": "Als ik beslis om mijn gegevens te delen met gekwalificeerde onderzoekers en mij dan bedenk, wat gebeurt er dan met mijn reeds verzamelde gegevens?",
+      "a1": "Mijn account en gegevens worden verwijderd",
+      "a2": "Mijn gegevens zullen nog worden gebruikt in onderzoek",
+      "a3": "Mijn gegevens worden verstuurd naar mijn reguliere zorgverlener"
+    },
+    "q4": {
+      "q": "Zijn er risico’s verbonden aan het meedoen aan dit onderzoek?",
+      "a1": "Er zijn geen risico’s verbonden aan het meedoen aan dit onderzoek",
+      "a2": "Er is een risico dat mijn reguliere arts niet meer is toegestaan om mij zorg te verlenen",
+      "a3": "Sommige activiteiten kunnen vermoeiend zijn en het zien van mijn gegevens kan emoties oproepen"
+    },
+    "q5": {
+      "q": "Met de mPower app ben ik in staat om",
+      "a1": "Mijn symptomen bij te houden",
+      "a2": "Een afspraak te maken bij mijn reguliere arts",
+      "a3": "Mij aan te sluiten bij een steungroep voor mensen met de ziekte van Parkinson"
+    }
+  },
+  "ineligible-screen": {
+    "requirements": "You must be at least 18, live in the US or the Netherlands, and be comfortable using a smartphone to participate."
+  }
+}

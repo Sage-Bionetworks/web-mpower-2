@@ -7,7 +7,7 @@
         <div class="container">
           <h2>About the study</h2>
 
-          <p>mPower is a free, 2 year mobile research study developed by Sage Bionetworks (nonprofit), with the goal of understanding the progression of Parkinson’s Disease that appears to be unique to individuals. </p>
+          <p>mPower is a free, 2 year mobile research study developed by Sage Bionetworks (nonprofit), with the goal of understanding the progression of Parkinson’s Disease that appears to be unique to individuals.</p>
   
           <p>Unlike many other conditions, Parkinson’s Disease can be uncertain and change over time for each person. mPower allows you to understand your unique story of Parkinson’s Disease. Through physical and cognitive activities, symptom, medication, and trigger tracking, you can learn your symptoms, factors, and how these relate to your medications. These insights allow both you and the Sage Bionetworks team to understand your unique patterns over time. This understanding allows for better conversations with your doctors and caregivers, insight into your day to day health and lifestyle, and potential to make a difference in the lives of people who are affected by Parkinson’s Disease. </p>
   
