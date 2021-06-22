@@ -57,7 +57,7 @@ export default {
       totalSteps: 3,
       residence: 'Select',
       comfort: 'Select',
-      states: [this.$t('eligibility-screen.q2.select'), this.$t('eligibility-screen.q2.in-US'), this.$t('eligibility-screen.q2.in-other'), this.$t('eligibility-screen.q2.outside-eligible-area')],
+      states: [this.$t('eligibility-screen.q2.select'), this.$t('eligibility-screen.q2.in-US'), this.$t('eligibility-screen.q2.in-Canada'), this.$t('eligibility-screen.q2.in-Netherlands'), this.$t('eligibility-screen.q2.outside-eligible-area')],
       age: ''
     }
   },
@@ -92,11 +92,7 @@ export default {
       this.step += 1;
     },
     doSubmit() {
-      if (this.comfort === this.$t('eligibility-screen.q3.have-android') && window.queryParams.android !== "true") {
-          window.location = ANDROID_FORM_LINK;
-          return;
-      }
-      var validResidence = (this.residence === this.$t('eligibility-screen.q2.in-US') || this.residence === this.$t('eligibility-screen.q2.in-other'));
+      var validResidence = (this.residence !== this.$t('eligibility-screen.q2.outside-eligible-area'));
       var validComfort = (this.comfort !== this.$t('eligibility-screen.q3.do-not-have'))
       var validAge = this.age >= 18;
 
