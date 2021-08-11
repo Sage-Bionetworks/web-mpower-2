@@ -9,7 +9,7 @@
           v-model="phoneValue"
           :default-country-code="defaultCountry"
           :only-countries="countryCodes"
-          @update="onCountryChange"></VuePhoneNumberInput>
+          @update="onUpdate"></VuePhoneNumberInput>
       </div>
       <p style="text-align: center; margin-top: 3rem">Pick one depending on your mobile phone:</p>
       <div class="buttons">
@@ -46,7 +46,7 @@ export default {
   computed: {
   },
   methods: {
-    onCountryChange: function (updatedObject) {
+    onUpdate: function (updatedObject) {
       this.selectedRegionCode = updatedObject.countryCode
       this.isValid = updatedObject.isValid
     },
