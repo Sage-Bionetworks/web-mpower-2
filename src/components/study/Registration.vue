@@ -5,19 +5,19 @@
       <p>Thank you! Please enter your mobile phone number and select your phone type to receive your download link for the mPower app:</p>
 
       <div style="text-align: center; margin-top: 2rem">
-        <vue-tel-input
+        <VuePhoneNumberInput
           v-model="phoneValue"
-          :defaultCountry="defaultCountry"
-          :onlyCountries="countryCodes"
-          @country-changed="onCountryChange"></vue-tel-input>
+          :default-country-code="defaultCountry"
+          :only-countries="countryCodes"
+          @update="onCountryChange"></VuePhoneNumberInput>
       </div>
       <p style="text-align: center; margin-top: 3rem">Pick one depending on your mobile phone:</p>
       <div class="buttons">
         <a @click="apple">
-          <BridgeImage src="/static/images/App_Store_Badge.svg" :style="{opacity: hasNumber}"/>
+          <BridgeImage src="/static/images/App_Store_Badge.svg" :style="{opacity: isValid ? 1 : .6}"/>
         </a>
         <a @click="google">
-          <BridgeImage src="/static/images/Android_Google_Play.svg" :style="{opacity: hasNumber}"/>
+          <BridgeImage src="/static/images/Android_Google_Play.svg" :style="{opacity: isValid ? 1 : .6}"/>
         </a>
       </div>
     </div>
@@ -29,37 +29,36 @@
 import MainNav from './MainNav.vue'
 import store from '../store'
 import axios from 'axios';
-import { VueTelInput } from 'vue-tel-input'
+import VuePhoneNumberInput from 'vue-phone-number-input'
 
 export default {
   name: 'StudyRegistration',
-  components: { MainNav, VueTelInput },
+  components: { MainNav, VuePhoneNumberInput },
   data() {
     return {
       phoneValue: '',
       countryCodes: ['CA','US','NL'],
       defaultCountry: this.$t('registration-screen.default-region-code'),
       selectedRegionCode: '',
+      isValid: false,
     }
   },
   computed: {
-    hasNumber: function() {
-      return ( this.phoneValue && this.phoneValue.replace(/\D/g,'').length >= 10 ) ? 1 : .5
-    },
   },
   methods: {
-    onCountryChange: function (countryObject) {
-      this.selectedRegionCode = countryObject.iso2
+    onCountryChange: function (updatedObject) {
+      this.selectedRegionCode = updatedObject.countryCode
+      this.isValid = updatedObject.isValid
     },
 
     apple: function(event) {
-      if (this.hasNumber === 1) {
+      if (this.isValid) {
         event.target.style.opacity = .6;
         this.post('iPhone OS')
       }
     },
     google: function(event) {
-      if (this.hasNumber === 1) {
+      if (this.isValid) {
         event.target.style.opacity = .6;
         this.post('Android')
       }
@@ -91,7 +90,7 @@ export default {
 }
 </script>
 
-<style src="vue-tel-input/dist/vue-tel-input.css"></style>
+<style src="vue-phone-number-input/dist/vue-phone-number-input.css"></style>
 <style scoped>
 .container {
   padding-top: 5rem;
