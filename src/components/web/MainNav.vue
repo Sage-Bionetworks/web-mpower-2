@@ -8,9 +8,6 @@
       <router-link to="/about">About</router-link>
       <router-link to="/team">Team</router-link>
     </div>
-    <div class="right">
-      <router-link class="join-button" to="/study/intro">Join</router-link>
-    </div>
   </nav>
 </template>
 

@@ -1,5 +1,8 @@
 <template>
   <div class="docked-layout">
+    <div class="alert alert-primary" role="alert" style="text-align: center; padding: 30px 10px;">
+      The mPower Parkinson’s Disease study is closed for enrollment. Thank you for your interest and contributions. The study is no longer accepting new participants.
+    </div>
     <MainNav/>
     <section class="smooth-scroller" style="padding-top: 0">
       <section style="height: 30vw; min-height: 15rem; background: linear-gradient(#5A478F, #47337D)">
@@ -50,12 +53,7 @@
             <BridgeImage style="transform: scale(0.7); padding-bottom: 1rem" src="/static/images/create your story.svg"/>
           </div>
           <div class="text">
-            <h3>Create your story</h3>
-            <p>In just a minute you can see if you are eligible to participate in the mPower study. Find out now!</p>
-
-            <p style="margin-top: 2rem">
-              <router-link class="join-button" to="/study/intro">Join</router-link>
-            </p>
+            <p>The mPower Parkinson’s Disease study is closed for enrollment. Thank you for your interest and contributions. The study is no longer accepting new participants.</p>
           </div>
         </div>
       </section>
