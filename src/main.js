@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Store from './components/store'
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
 var store = new Store();
 
