@@ -116,9 +116,7 @@
               src="/static/images/create your story.svg"/>
           </div>
           <div class="text">
-            <h3>Create your story</h3>
-            <p>In just a minute you can see if you are eligible to participate in the mPower study. Find out now!</p>
-            <p><router-link class="join-button" to="/study/intro">Join</router-link></p>
+            <p>The mPower Parkinson’s Disease study is closed for enrollment. Thank you for your interest and contributions. The study is no longer accepting new participants.</p>
           </div>
         </div>
       </section>
